@@ -18,7 +18,7 @@
 - Убедитесь, что у вас установлен Docker и Docker Compose.
 - Запустите контейнеры:
     ```bash
-    docker-compose up --build
+    docker-compose up --build --force-recreate
     ```
 - Создайте superuser для доступа к админке
   ```bash
@@ -29,6 +29,10 @@ http://localhost:8000/
 
 Войдите в админку Django и создайте элементы древовидного меню в модели Menu.
 http://localhost:8000/admin/
+```
+user = alex
+password = alex
+```
 
 Это руководство поможет вам настроить окружение для выполнения тестового задания и проверить его работоспособность.р разработки Django:
 
