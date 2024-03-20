@@ -1,0 +1,30 @@
+{% load draw_menu %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	 {% draw_menu as parent_menu %}
+	 <ul>
+	 {% if parent_menu %}
+	 	{% for parent in parent_menu %}
+	 		<li><a href="">{{ parent.title }}</a></li>
+			 <ul>
+				{% for child in parent.child.all %}
+				  	<li><a href="">{{ child.title }}</a></li>
+				{% endfor %}
+			 </ul>
+	 	{% endfor %}
+	  {% endif %}
+	 </ul>
+
+
+
+
+
+
+</body>
+</html>
